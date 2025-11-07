@@ -11,7 +11,7 @@ public class Bai3 {
         private String color = "blue";
 
         public Fan() {
-            this.speed = SLOW;
+            this.speed = 1;
             this.on = false;
             this.radius = 5;
             this.color = "blue";
