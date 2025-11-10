@@ -23,11 +23,14 @@ public class Main {
             } else {
                 System.out.println(equation.getC() / equation.getB());
             }
-        } else if(equation.getDelta()!=0) {
+        } else if (equation.getDelta() != 0) {
             System.out.println(equation.getRoot1());
             System.out.println(equation.getRoot2());
-        } else {
+        } else if (equation.getDelta() == 0) {
             System.out.println(equation.getRoot1());
+        } else {
+            System.out.println("Phương trình vô nghệm");
         }
     }
 }
+
