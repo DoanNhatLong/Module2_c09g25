@@ -1,55 +1,56 @@
 package ss6_inheritance.bai_tap.bai_3;
 
 public class MoveablePoint extends Point{
-    float xspeed;
-    float yspeed;
+    float xSpeed;
+    float ySpeed;
+
 
     public MoveablePoint() {
     }
 
-    public MoveablePoint(float xspeed, float yspeed) {
-        this.xspeed = xspeed;
-        this.yspeed = yspeed;
+    public MoveablePoint(float xspeed, float ySpeed) {
+        this.xSpeed = xspeed;
+        this.ySpeed = ySpeed;
     }
 
-    public MoveablePoint(float x, float y, float xspeed, float yspeed) {
+    public MoveablePoint(float x, float y, float xspeed, float ySpeed) {
         super(x, y);
-        this.xspeed = xspeed;
-        this.yspeed = yspeed;
+        this.xSpeed = xspeed;
+        this.ySpeed = ySpeed;
     }
 
-    public float getXspeed() {
-        return xspeed;
+    public float getXSpeed() {
+        return xSpeed;
     }
 
-    public void setXspeed(float xspeed) {
-        this.xspeed = xspeed;
+    public void setXSpeed(float xspeed) {
+        this.xSpeed = xspeed;
     }
 
-    public float getYspeed() {
-        return yspeed;
+    public float getYSpeed() {
+        return ySpeed;
     }
 
-    public void setYspeed(float yspeed) {
-        this.yspeed = yspeed;
+    public void setYSpeed(float ySpeed) {
+        this.ySpeed = ySpeed;
     }
 
     public void setSpeed(float set1, float set2){
-        setXspeed(set1);
-        setYspeed(set2);
+        setXSpeed(set1);
+        setYSpeed(set2);
     }
 
     public float[] getSpeed(){
-        return new float[]{getXspeed(),getYspeed()};
+        return new float[]{getXSpeed(), getYSpeed()};
     }
 
     public String toString(){
-        return  " "+ super.toString() + getXspeed() +getYspeed();
+        return  " "+ super.toString() + getXSpeed() + getYSpeed();
     }
 
     public MoveablePoint move(){
-        super.setX(super.getX()+getXspeed());
-        super.setY(super.getY()+getYspeed());
+        super.setX(super.getX()+ getXSpeed());
+        super.setY(super.getY()+ getYSpeed());
         return this;
     }
 
