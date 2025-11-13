@@ -1,7 +1,16 @@
 package ss6_inheritance.thuc_hanh.hinh_hoc;
 
-public class Circle extends Shape {
+import ss7_interface.bai_tap.bai1.Resizeable;
+
+public class Circle extends Shape implements Resizeable {
     private double radius = 1.0;
+
+    @Override
+    public void resizeShape(double percent) {
+        System.out.println("Ban đầu" + getArea());
+        setRadius(getRadius()*(percent+100)/100);
+        System.out.println("Sau khi tăng" + getArea());
+    }
 
     public Circle() {
     }
