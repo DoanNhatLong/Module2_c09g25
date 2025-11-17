@@ -35,6 +35,6 @@ public class ArrayList {
         for (int i = index; i < arr.length; i++) {
             arr[index] = arr[index + 1];
         }
-        arr[arr.length - 1] = null;
+        arr[size(arr)] = null;
     }
 }
