@@ -1,6 +1,6 @@
-package ss8_clean_code.entity;
+package ss10_vehicle.entity;
 
-public class Motorbike extends Vehicle{
+public class Motorbike extends Vehicle {
     int power;
 
     public Motorbike() {

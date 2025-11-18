@@ -1,4 +1,4 @@
-package ss8_clean_code.entity;
+package ss10_vehicle.entity;
 
 public abstract class Vehicle {
     String id;
