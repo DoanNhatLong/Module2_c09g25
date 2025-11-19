@@ -2,7 +2,7 @@ package ss10_vehicle.controller;
 
 import ss10_vehicle.service.IVehicleService;
 import ss10_vehicle.service.VehicleService;
-import ss10_vehicle.view.InputData;
+import ss10_vehicle.view.VehicleView;
 
 
 import java.util.Scanner;
@@ -30,7 +30,7 @@ public class VehicleController {
             int choice = Integer.parseInt(sc.nextLine());
             switch (choice) {
                 case ADD -> {
-                    vehicleService.addVehicle(InputData.inputVehicle());
+                    vehicleService.addVehicle(VehicleView.inputVehicle());
                 }
                 case DELETE -> {
                     System.out.println("Nhập vào ID");
@@ -45,7 +45,7 @@ public class VehicleController {
                 }
 
                 case DISPLAY -> {
-                    vehicleService.displayVehicle(InputData.inputType());
+                    vehicleService.displayVehicle(VehicleView.inputType());
                 }
                 case EXIT -> {
                     return;

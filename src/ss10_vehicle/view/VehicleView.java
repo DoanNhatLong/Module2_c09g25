@@ -7,9 +7,9 @@ import ss10_vehicle.entity.Vehicle;
 
 import static ss10_vehicle.controller.VehicleController.sc;
 
-public class InputData {
+public class VehicleView {
     public static Vehicle inputVehicle() {
-        int type = InputData.inputType();
+        int type = VehicleView.inputType();
         System.out.println("Nhập name");
         String name = sc.nextLine();
         System.out.println("Nhập năm");
