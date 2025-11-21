@@ -33,4 +33,11 @@ public class Truck extends Vehicle {
                 ", owner='" + owner + '\'' +
                 '}';
     }
+
+    @Override
+    public String toCSV() {
+        return "Truck,"+getName()+","+getYear()+","+getId()+","+getOwner()+","+getLoad();
+    }
+
+
 }

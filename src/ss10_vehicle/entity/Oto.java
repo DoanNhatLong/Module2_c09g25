@@ -45,4 +45,9 @@ public class Oto extends Vehicle {
                 ", owner='" + owner + '\'' +
                 '}';
     }
+
+    @Override
+    public String toCSV() {
+        return "Oto,"+getName()+","+getYear()+","+getId()+","+getOwner()+","+getSeat()+","+getStyle();
+    }
 }

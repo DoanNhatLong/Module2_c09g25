@@ -57,4 +57,6 @@ public abstract class Vehicle {
                 ", owner='" + owner + '\'' +
                 '}';
     }
+
+    public abstract String toCSV();
 }

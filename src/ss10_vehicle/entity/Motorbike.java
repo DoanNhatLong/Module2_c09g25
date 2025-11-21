@@ -33,4 +33,9 @@ public class Motorbike extends Vehicle {
                 ", owner='" + owner + '\'' +
                 '}';
     }
+
+    @Override
+    public String toCSV() {
+        return "Motorbike,"+getName()+","+getYear()+","+getId()+","+getOwner()+","+getPower();
+    }
 }
