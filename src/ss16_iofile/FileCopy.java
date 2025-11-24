@@ -42,18 +42,11 @@ public class FileCopy {
                 charCount++;
             }
 
-            System.out.println("Sao chép thành công! Số ký tự trong tệp: " + charCount);
+            System.out.println("Số ký tự trong tệp: " + charCount);
 
         } catch (IOException e) {
             System.out.println("Có lỗi xảy ra: " + e.getMessage());
-        } finally {
-            try {
-                if (temp1 != null) temp1.close();
-                if (temp2 != null) temp2.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
+
     }
-}
+}}
 
