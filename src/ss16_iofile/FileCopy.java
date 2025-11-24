@@ -29,13 +29,11 @@ public class FileCopy {
             return;
         }
 
-        FileReader temp1 = null;
-        FileWriter temp2 = null;
         int charCount = 0;
 
         try {
-            temp1 = new FileReader(sourceFile);
-            temp2 = new FileWriter(targetFile);
+            FileReader temp1 = new FileReader(sourceFile);
+            FileWriter temp2 = new FileWriter(targetFile);
             int number;
             while ((number = temp1.read()) != -1) {
                 temp2.write(number);
