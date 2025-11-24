@@ -17,8 +17,10 @@ public class Repository {
 
     public void display() {
         List<Product> productList=getAll();
+        int count=100;
         for (Product product : productList) {
-            System.out.println(product);
+            System.out.println( "VH-"+ count+". "+ product);
+            count++;
         }
     }
 
