@@ -17,7 +17,7 @@ public class Repository {
 
     public void display() {
         List<Product> productList=getAll();
-        int count=100;
+        int count=1000;
         for (Product product : productList) {
             System.out.println( "PD-"+ count+". "+ product);
             count++;
