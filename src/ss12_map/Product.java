@@ -3,6 +3,7 @@ package ss12_map;
 import java.io.Serializable;
 
 public class Product implements Serializable {
+    private int ID;
     String id;
     String name;
     double price;
@@ -40,10 +41,19 @@ public class Product implements Serializable {
         this.price = price;
     }
 
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
+
     @Override
     public String toString() {
         return "Product{" +
-                "id='" + id + '\'' +
+                "ID=" + ID +
+                ", id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", price=" + price +
                 '}';

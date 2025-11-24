@@ -9,7 +9,7 @@ import static ss12_map.ProductManagement.sc;
 public class Repository {
     final static String PRODUCT_FILE="ss12_map/product.dat";
 
-    public List<Product> getAll(){
+    public static List<Product> getAll(){
         List<Product> productLinkedList;
         productLinkedList= ReadAndWriteFile.readBinaryFile(PRODUCT_FILE);
         return productLinkedList;
@@ -19,13 +19,14 @@ public class Repository {
         List<Product> productList=getAll();
         int count=100;
         for (Product product : productList) {
-            System.out.println( "VH-"+ count+". "+ product);
+            System.out.println( "PD-"+ count+". "+ product);
             count++;
         }
     }
 
     public void addProduct(Product temp) {
         List<Product> productList=getAll();
+        temp.setID(makeID());
         productList.add(temp);
         ReadAndWriteFile.writeProductListToBinaryFile(PRODUCT_FILE,productList);
     }
@@ -68,6 +69,16 @@ public class Repository {
         ReadAndWriteFile.writeProductListToBinaryFile(PRODUCT_FILE,productList);
     }
 
+    public static int makeID(){
+        List<Product> productList=getAll();
+        int max=0;
+        for (Product product : productList) {
+            if (product.getID()>max){
+                max= product.getID();
+            }
+        }
+        return max+1;
+    }
 
 
 
