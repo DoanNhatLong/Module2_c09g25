@@ -1,6 +1,8 @@
 package ss12_map;
 
-public class Product {
+import java.io.Serializable;
+
+public class Product implements Serializable {
     String id;
     String name;
     double price;
