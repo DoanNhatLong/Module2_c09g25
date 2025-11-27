@@ -71,28 +71,25 @@ public class VehicleRepository implements IVehicleRepository {
     @Override
     public void displayVehicle(int i) {
         List<Vehicle> vehicleList = getAll();
-        for (int j = 0; j < vehicleList.size() ; j++) {
-
+        for (Vehicle vehicle : vehicleList) {
+            switch (i) {
+                case 1 -> {
+                    if (vehicle instanceof Truck) {
+                        System.out.println(vehicle);
+                    }
+                }
+                case 2 -> {
+                    if (vehicle instanceof Motorbike) {
+                        System.out.println(vehicle);
+                    }
+                }
+                case 3 -> {
+                    if (vehicle instanceof Oto) {
+                        System.out.println(vehicle);
+                    }
+                }
+            }
         }
-//        for (Vehicle vehicle : vehicleList) {
-//            switch (i) {
-//                case 1 -> {
-//                    if (vehicle instanceof Truck) {
-//                        System.out.println(vehicle);
-//                    }
-//                }
-//                case 2 -> {
-//                    if (vehicle instanceof Motorbike) {
-//                        System.out.println(vehicle);
-//                    }
-//                }
-//                case 3 -> {
-//                    if (vehicle instanceof Oto) {
-//                        System.out.println(vehicle);
-//                    }
-//                }
-//            }
-//        }
     }
 
     @Override
